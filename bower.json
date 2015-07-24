@@ -1,0 +1,20 @@
+{
+  "name": "iu-branding",
+  "version": "0.0.1",
+  "homepage": "https://github.com/iu-uits-es/iu-branding",
+  "authors": [
+    "ESI Middleware Team <bl-uits-esi-sit@exchange.iu.edu>"
+  ],
+  "description": "Bower component which delivers LESS and CSS assets for IU Branding",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

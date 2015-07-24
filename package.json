@@ -1,0 +1,20 @@
+{
+  "name": "iu-branding",
+  "version": "0.0.1",
+  "description": "Bower component which delivers LESS and CSS assets for IU branding",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iu-uits-es/iu-branding.git"
+  },
+  "author": "ESI Middleware Team <bl-uits-esi-sit@exchange.iu.edu>",
+  "license": "MIT",
+  "homepage": "https://github.com/iu-uits-es/iu-branding#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-lifecycle": "git+https://github.com/iu-uits-es/gulp-lifecycle.git"
+  }
+}

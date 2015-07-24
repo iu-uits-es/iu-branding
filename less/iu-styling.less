@@ -1,0 +1,392 @@
+@font-face {
+  font-family: 'BentonSansRegular';
+  src: url("https://fonts.iu.edu/fonts/benton-sans-regular.eot");
+  src: url("https://fonts.iu.edu/fonts/benton-sans-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-regular.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-regular.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-regular.svg#BentonSansRegular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'BentonSansCondRegular';
+  src: url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot");
+  src: url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.svg#BentonSansCondRegular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'BentonSansCondBold';
+  src: url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.eot");
+  src: url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.svg#BentonSansCondBold") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'GeorgiaProItalic';
+  src: url("https://fonts.iu.edu/fonts/georgia-pro-italic.eot");
+  src: url("https://fonts.iu.edu/fonts/georgia-pro-italic.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.woff") format("woff"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.svg#GeorgiaProItalic") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+    font-family: 'GeorgiaProBoldItalic';
+    src: url('https://fonts.iu.edu/fonts/georgia-pro-bold-italic.eot');
+    src: url('https://fonts.iu.edu/fonts/georgia-pro-bold-italic.eot?#iefix') format('embedded-opentype'),
+         url('https://fonts.iu.edu/fonts/georgia-pro-bold-italic.woff') format('woff'),
+         url('https://fonts.iu.edu/fonts/georgia-pro-bold-italic.ttf') format('truetype'),
+         url('https://fonts.iu.edu/fonts/georgia-pro-bold-italic.svg#GeorgiaProBoldItalic') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+html {
+  font-size:100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  flex: none;
+  div.header-wrapper {
+    background-color: @iu-onyx;
+    color: white;
+    div.page-header {
+      padding-bottom: 0;
+      border-bottom: 0;
+      margin: 0;
+      h1 {
+        margin-top: 10px;
+      }
+      .label {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+    }
+    a.referrer {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+#main-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+#main-body::after, #content-wrapper::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: var(--space);
+  height: 0px;
+  visibility: hidden;
+}
+
+#content-wrapper {
+  flex: 1 0 auto;
+  padding: 25px 65px 60px;
+}
+
+#user-info {
+  margin-top: 15px;
+  color: white;
+  ul.dropdown-menu {
+    li a {
+      color: black;
+    }
+    width: 300px;
+    padding: 10px 20px;
+  }
+  a.dropdown-toggle {
+    color: white;
+    text-decoration: none;
+  }
+  i.fa-caret-down {
+    margin-left: 7px;
+  }
+}
+
+div.nav-wrapper {
+  background-color: white;
+  border-bottom: 1px solid @iu-onyx;
+}
+
+#form-errors {
+  height: 130px;
+}
+
+#form-warnings {
+  height: 130px;
+}
+/* bootstrap */
+.panel-heading {
+  padding: 0;
+}
+/* bootstrap */
+.panel-title a {
+  display: block;
+  padding: 10px 15px;
+}
+/* bootstrap */
+.panel-title a:hover,a:focus {
+  text-decoration: none;
+}
+
+label.policy {
+  padding-left: 0;
+}
+
+.extended-options .nested-inline-form-group {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* bootstrap */
+.form-control {
+  border-color: @iu-steel;
+}
+
+#branding-bar {
+  background-color: @iu-crimson;
+  color: white;
+  border-top: 6px solid @iu-red;
+  padding: 0;
+  div.container {
+    position: relative;
+    padding-left: 75px;
+    a {
+      display: table-cell;
+      vertical-align: middle;
+      color: white;
+      line-height: 45px;
+      font-size: 1.25em;
+      font-family: @font-family-cond-sans-serif;
+      letter-spacing: .025em;
+      text-transform: uppercase;
+      text-decoration: none;
+      img.trident {
+        width: 43px;
+        position: absolute;
+        top: -6px;
+        left: 15px;
+      }
+    }
+  }
+}
+
+#user-info {
+  input {
+    border-color: @iu-crimson;
+  }
+  a.btn {
+    border-color: @iu-crimson;
+  }
+  .dropdown-menu {
+
+    .divider {
+      background-color: @iu-crimson;
+    }
+    & > li > a {
+      color: @iu-crimson;
+      &:hover {
+        background: @iu-crimson;
+        color: white;
+      }
+    }
+  }
+}
+
+#navbar {
+  min-height: 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  .nav {
+    width: 100%;
+    border-left: 1px solid @iu-crimson;
+    margin: 0;
+    & > li {
+      border-right: 1px solid @iu-crimson;
+      text-align: center;
+      display: inline-block;
+      width: 85px;
+      & > a {
+        padding: 4px 15px 5px 25px;
+        color: @iu-crimson;
+        line-height: 1.428571429em;
+        margin: 0;
+        .nav-icon {
+          float: left;
+          margin-right: 10px;
+        }
+        .nav-caret {
+          float: right;
+        }
+      }
+      & > .dropdown-menu {
+        padding: 0;
+        left: -1px;
+        text-align: left;
+        a {
+          padding: 7px 15px 9px 15px;
+          color: @iu-crimson;
+          border-bottom: 1px dotted black;
+          &:hover {
+            background-color: @iu-dark-blue;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    line-height: 0;
+  }
+}
+#navbar .nav > li > a:hover, #navbar .nav > li > a:focus, #navbar .nav > li > a:active, #navbar .nav > li.open > a {
+  background-color: @iu-crimson;
+  color: white;
+}
+
+main {
+  background-color: @iu-cream;
+  header {
+    border-bottom: 1px solid @iu-onyx;
+    margin-bottom: 25px;
+  }
+  div.content {
+    background-color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+#footer {
+  flex: none;
+  background-color: white;
+  padding-bottom: 15px;
+  font-size: small;
+  text-align: center;
+  a {
+    color: @iu-crimson;
+    text-decoration: none;
+  }
+  .tagline {
+    display: block;
+    background: @iu-crimson;
+    color: white;
+    font-family: @font-family-cond-bold-sans-serif;
+    font-size: 1.375rem;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    text-align: center;
+    padding: 8px 24px;
+    span {
+      font-family: GeorgiaProBoldItalic, Georgia, serif;
+      font-size: .7778em;
+      text-transform: lowercase;
+      letter-spacing: 0;
+      display: inline-block;
+      margin-left: -4px;
+    }
+  }
+  a.trident img {
+    width: 24px;
+  }
+  .copyright {
+    margin: 15px 0 10px;
+  }
+}
+
+@media only screen and (max-width: @screen-sm-min) {
+  #content-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  #footer {
+    border-top: 6px solid @iu-crimson;
+    position: relative;
+    padding: 24px 0;
+    text-align: left;
+    .tagline {
+      position: absolute;
+      left: 50%;
+      top: -25px;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    a.trident {
+      float: left;
+    }
+    .copyright {
+      margin: 7px 10px 10px;
+      float: left;
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  #branding-bar {
+    div.container {
+      padding-left: 95px;
+      a {
+        line-height: 52px;
+        img.trident {
+          width: 65px;
+        }
+      }
+    }
+  }
+
+  #header {
+    div.header-wrapper {
+      padding: 0 50px;
+      div.page-header {
+        margin: 10px 0 20px;
+        h1 {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  #user-info {
+    margin-top: 55px;
+  }
+
+  a.referrer + #user-info {
+    margin-top: 15px;
+    clear: right;
+  }
+
+  #navbar .nav > li {
+    width: 165px;
+  }
+
+  #navbar .nav > li {
+    width: 165px;
+  }
+
+  div.miller-column {
+    height: 440px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
